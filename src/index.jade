@@ -1,0 +1,296 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title ES6 Part 1
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section(data-camera)
+        h1 ES6
+
+      section
+        h2 Intro
+        
+      section(data-camera)
+        h2 What? & Why?
+
+      section
+        h4 In the meantime...
+      section.hell
+        h1 Hell breaks loose
+        
+      section(data-camera)
+        h2 ECMAScript in Time
+        br
+        ul
+          li.bullet ECMAScript 3 (1999)
+          li.bullet ECMAScript 4 (Incompatible with ES3)
+          li.bullet ECMAScript 5 (2006)
+          li.bullet ECMAScript 5.1 (2011)
+          li.bullet The Void
+          li.bullet ECMAScript 6 (2015)
+          li.bullet ECMAScript 7 (dunno)
+          
+      section
+        h1 The void
+      
+      section(data-camera)
+        h3.bullet ES variations & Flavours
+        ul
+          li.bullet CoffeeScript
+          li.bullet JSX
+          li.bullet TypeScript
+          li.bullet Flow
+          li.bullet AtScript
+          li.bullet PureScript
+          li.bullet Dart
+        
+      section(data-camera)
+        h3.bullet CoffeeScript variations
+        ul
+          li.bullet IcedCoffee
+          li.bullet Coco
+          li.bullet LiveScript
+          li.bullet Parsec CoffeeScript
+          li.bullet Contracts.coffee
+          li.bullet Uberscript
+          li.bullet ToffeeScript
+          li.bullet Caffeine
+          li.bullet heap.coffee
+          li.bullet EmberScript
+      
+      section(data-camera)
+        h2 5 out of the first 7 have types
+      
+      section(data-camera)
+        h2.gigantic TYPES  
+        
+      section
+        img(src="images/nigga.png")
+      
+      section
+        img(src="images/mofo.png")  
+        
+      section
+        h2 ECMAScript 6
+        
+      section(data-camera)
+        h3 Features
+        ul
+          li modules
+          li module loaders
+          li.important arrows function
+          li classes
+          li iterators + for..of
+          li.important enhanced object literals
+          li.important template strings
+      section(data-camera)
+        h3 Features
+        ul
+          li destructuring
+          li default + rest + spread
+          li.important let + const
+          li.important promises
+          li proxies
+          li symbols
+          li map + set + weakmap + weakset
+      section(data-camera)
+        h3 Features
+        ul
+          li math + number + string + array + object APIs
+          li.important generators
+          li unicode
+          li.important subclassable built-ins
+          li binary and octal literals
+          li reflect api
+          li tail calls  
+      
+      section
+        h2 State of engines
+        
+      section(data-camera)
+        h2 Sucks Donkey Balls™
+        img(src='images/desktop-parity.png')
+      
+      section(data-camera)
+        h3 Mobile and server-side 
+        h3 also 
+        h3 Suck Donkey Balls
+        img(src='images/mobile-parity.png')
+          
+      section
+        h2 I want it NOW!  
+        
+      section
+        h2 Enter transpilers!
+        
+      section(data-camera)
+        h3 Transpilers
+        ul
+          li Closure Compiler
+          li Traceour
+          li Babel + core.js (Formerly 6to5)
+          
+      section(data-camera)
+        h3 Babel
+        h4 core.js + Regenerator
+        
+      section.awesome
+
+      section
+        h1 Time for awesome
+        
+      section
+        h2 Example 1
+        h3 Let the awesome begin
+        pre
+          code.language-javascript.
+            var callbacks = [];                        
+            for (var i = 0; i <= 2; i++) {
+              (function (i) {
+                callbacks[i] = function() { return i * 2; };
+              })(i);
+            } 
+          
+      section
+        h2 Example 1
+        h3 Let the awesome begin
+        pre
+          code.language-javascript.
+            let callbacks = [];                        
+            for (let i = 0; i <= 2; i++) {
+              callbacks[i] = function() { return i * 2; };
+            } 
+          
+      section
+        h2 Example 2
+        h3 Object sugar
+        pre
+          code.language-javascript.
+            var obj = { x, y };
+            var obj = { x: x, y: y };
+      
+      section
+        h2 Example 2
+        h3 Object sugar
+        pre
+          code.language-javascript.
+            var obj = {
+                foo: "bar",
+                [ "prop_" + foo() ]: 42
+            };
+          
+      section
+        h2 Example 2
+        h3 Object sugar
+        pre
+          code.language-javascript.
+            var obj = {
+                foo (a, b) {
+                  console.log('A method');
+                },
+                bar (x, y) {
+                  console.log('A method');
+                }
+            };
+      
+      section
+        h2 Example 3
+        h3 Code with Class
+        pre
+          code.language-javascript.
+            class Shape {
+              constructor (id, x, y) {
+                this.id = id;
+                this.move(x, y);
+              }
+              move (x, y) {
+                this.x = x;
+                this.y = y;
+              }
+            } 
+
+      section
+        h2 Example 3
+        h3 Code with Class
+        pre
+          code.language-javascript.
+            class Rectangle extends Shape {
+              constructor (id, x, y, width, height) {
+                super(id, x, y);
+                this.width  = width;
+                this.height = height;
+              }
+            }
+          
+      section
+        h2 Example 4
+        h3 Generate awesomeness
+        pre
+          code.language-javascript.
+            let fibonacci = function* (numbers) {
+              let pre = 0, cur = 1;
+              while (numbers-- > 0) {
+                [ pre, cur ] = [ cur, pre + cur ];
+                yield cur;
+              }
+            };
+          
+      section
+        h2 Example 4
+        h3 Generate awesomeness
+        pre
+          code.language-javascript.
+            for (let n of fibonacci(1000))
+              console.log(n);
+
+      section
+        h2 Example 5
+        h3 More methods
+        pre
+          code.language-javascript.
+            Object.assign(dst, src1, src2);
+            [ 1, 3, 4, 2 ].find(x => x > 3);
+            " ".repeat(4 * depth);
+            "hello".includes("ell");
+            console.log(Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON);
+            Math.trunc(42.7)
+            Math.sign(-7)
+          
+      section(data-camera)
+        h2 Resources
+        br
+        ul
+          li https://github.com/lukehoban/es6features
+          li https://people.mozilla.org/~jorendorff/es6-draft.html
+          li https://mail.mozilla.org/listinfo/es-discuss
+          li https://kangax.github.io/compat-table/es6/
+          li https://babeljs.io/
+
+      section(data-camera)
+        h2 Next
+        br
+        ul
+          li Chapter 2: Scope and classes
+          li Chapter 3: Iterators and Generators 
+          li Chapter 4: Promises, New functions and syntax 
+          li Chapter 5: Async and ES7     
+          
+      section
+        h1 Thanks!
+
+      section
+        h2 
+        br
+        ul
+          li Geronimo Garcia <Geronimo.Garcia@globant.com>
+          li @geronimogarcia
+          li DarkThrone
+
+    script(src='build/build.js')
