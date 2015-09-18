@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ES6</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>ES6</h1>
+      </section>
+      <section>
+        <h2>Intro</h2><br>
+        <ul>
+          <li>Gerónimo Garcia Sgritta</li>
+          <li>Software Architect @ Globant</li>
+          <li>Dev for more than 10 years</li>
+          <li>JavaScript Engine specialist</li>
+          <li>WebAssembly committee member</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What? & Why?</h2>
+      </section>
+      <section>
+        <h4>In the meantime...</h4>
+      </section>
+      <section class="hell">
+        <h1>Hell breaks loose</h1>
+      </section>
+      <section>
+        <h2>ECMAScript in Time</h2><br>
+        <ul>
+          <li class="bullet">ECMAScript 3 (1999)</li>
+          <li class="bullet">ECMAScript 4 (Incompatible with ES3)</li>
+          <li class="bullet">ECMAScript 5 (2006)</li>
+          <li class="bullet">ECMAScript 5.1 (2011)</li>
+          <li class="bullet">The Void</li>
+          <li class="bullet">ECMAScript 6 (2015)</li>
+          <li class="bullet">ECMAScript 7 (dunno)</li>
+        </ul>
+      </section>
+      <section>
+        <h1>The void</h1>
+      </section>
+      <section>
+        <h3 class="bullet">ES variations & Flavours</h3>
+        <ul>
+          <li class="bullet">CoffeeScript</li>
+          <li class="bullet">JSX</li>
+          <li class="bullet">TypeScript</li>
+          <li class="bullet">Flow</li>
+          <li class="bullet">AtScript</li>
+          <li class="bullet">PureScript</li>
+          <li class="bullet">Dart</li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="bullet">CoffeeScript variations</h3>
+        <ul>
+          <li class="bullet">IcedCoffee</li>
+          <li class="bullet">Coco</li>
+          <li class="bullet">LiveScript</li>
+          <li class="bullet">Parsec CoffeeScript</li>
+          <li class="bullet">Contracts.coffee</li>
+          <li class="bullet">Uberscript</li>
+          <li class="bullet">ToffeeScript</li>
+          <li class="bullet">Caffeine</li>
+          <li class="bullet">heap.coffee</li>
+          <li class="bullet">EmberScript</li>
+        </ul>
+      </section>
+      <section>
+        <h2>5 out of the first 7 have types</h2>
+      </section>
+      <section>
+        <h2 class="gigantic">TYPES  </h2>
+      </section>
+      <!--section-->
+      <!--  img(src="images/nigga.png")-->
+      <!---->
+      <!--section-->
+      <!--  img(src="images/mofo.png")  -->
+      <section>
+        <h2>ECMAScript 6</h2>
+      </section>
+      <section>
+        <h3>Features</h3>
+        <ul>
+          <li>modules</li>
+          <li>module loaders</li>
+          <li class="important">arrows function</li>
+          <li>classes</li>
+          <li>iterators + for..of</li>
+          <li class="important">enhanced object literals</li>
+          <li class="important">template strings</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Features</h3>
+        <ul>
+          <li>destructuring</li>
+          <li>default + rest + spread</li>
+          <li class="important">let + const</li>
+          <li class="important">promises</li>
+          <li>proxies</li>
+          <li>symbols</li>
+          <li>map + set + weakmap + weakset</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Features</h3>
+        <ul>
+          <li>math + number + string + array + object APIs</li>
+          <li class="important">generators</li>
+          <li>unicode</li>
+          <li class="important">subclassable built-ins</li>
+          <li>binary and octal literals</li>
+          <li>reflect api</li>
+          <li>tail calls  </li>
+        </ul>
+      </section>
+      <section>
+        <h2>State of engines</h2>
+      </section>
+      <section>
+        <h2>Sucks Donkey Balls™</h2><img src="images/desktop-parity.png">
+      </section>
+      <section>
+        <h3>Mobile and server-side </h3>
+        <h3>also </h3>
+        <h3>Suck Donkey Balls</h3><img src="images/mobile-parity.png">
+      </section>
+      <section>
+        <h2>I want it NOW!  </h2>
+      </section>
+      <section>
+        <h2>Enter transpilers!</h2>
+      </section>
+      <section>
+        <h3>Transpilers</h3>
+        <ul>
+          <li>Closure Compiler</li>
+          <li>Traceour</li>
+          <li>Babel + core.js (Formerly 6to5)</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Babel</h3>
+        <h4>core.js + Regenerator</h4>
+      </section>
+      <section class="awesome"></section>
+      <section>
+        <h1>Time for awesome</h1>
+      </section>
+      <section>
+        <h2>Example 1</h2>
+        <h3>Let the awesome begin</h3>
+        <pre><code class="language-javascript">var callbacks = [];                        
+for (var i = 0; i <= 2; i++) {
+  (function (i) {
+    callbacks[i] = function() { return i * 2; };
+  })(i);
+} 
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 1</h2>
+        <h3>Let the awesome begin</h3>
+        <pre><code class="language-javascript">let callbacks = [];                        
+for (let i = 0; i <= 2; i++) {
+  callbacks[i] = function() { return i * 2; };
+} 
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 2</h2>
+        <h3>Object sugar</h3>
+        <pre><code class="language-javascript">var obj = { x, y };
+var obj = { x: x, y: y };
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 2</h2>
+        <h3>Object sugar</h3>
+        <pre><code class="language-javascript">var obj = {
+    foo: "bar",
+    [ "prop_" + foo() ]: 42
+};
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 2</h2>
+        <h3>Object sugar</h3>
+        <pre><code class="language-javascript">var obj = {
+    foo (a, b) {
+      console.log('A method');
+    },
+    bar (x, y) {
+      console.log('A method');
+    }
+};
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 3</h2>
+        <h3>Code with Class</h3>
+        <pre><code class="language-javascript">class Shape {
+  constructor (id, x, y) {
+    this.id = id;
+    this.move(x, y);
+  }
+  move (x, y) {
+    this.x = x;
+    this.y = y;
+  }
+} 
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 3</h2>
+        <h3>Code with Class</h3>
+        <pre><code class="language-javascript">class Rectangle extends Shape {
+  constructor (id, x, y, width, height) {
+    super(id, x, y);
+    this.width  = width;
+    this.height = height;
+  }
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 4</h2>
+        <h3>Generate awesomeness</h3>
+        <pre><code class="language-javascript">let fibonacci = function* (numbers) {
+  let pre = 0, cur = 1;
+  while (numbers-- > 0) {
+    [ pre, cur ] = [ cur, pre + cur ];
+    yield cur;
+  }
+};
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 4</h2>
+        <h3>Generate awesomeness</h3>
+        <pre><code class="language-javascript">for (let n of fibonacci(1000))
+  console.log(n);
+  </code></pre>
+      </section>
+      <section>
+        <h2>Example 5</h2>
+        <h3>More methods</h3>
+        <pre><code class="language-javascript">Object.assign(dst, src1, src2);
+[ 1, 3, 4, 2 ].find(x => x > 3);
+" ".repeat(4 * depth);
+"hello".includes("ell");
+console.log(Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON);
+Math.trunc(42.7);
+Math.sign(-7);
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 6</h2>
+        <h3>Arrow functions</h3>
+        <pre><code class="language-javascript">odds  = evens.map(v => v + 1);
+pairs = evens.map(v => ({ even: v, odd: v + 1 }));
+nums  = evens.map((v, i) => v + i);
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 7</h2>
+        <h3>Default params</h3>
+        <pre><code class="language-javascript">function f (x, y = 7, z = 42) {
+    return x + y + z
+}
+f(1) === 50;    
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 8</h2>
+        <h3>Destructuring</h3>
+        <pre><code class="language-javascript">let list = [ 1, 2, 3 ];
+let [ a, , b ] = list;
+let { op: a, lhs: { op: b }, rhs: c } = getASTNode();
+</code></pre>
+      </section>
+      <section>
+        <h2>Example 9</h2>
+        <h3>Destructuring</h3>
+        <pre><code class="language-javascript">function h ({ name, val }) {
+    console.log(name, val)
+}
+
+h({ name: "bar", val: 42 })
+</code></pre>
+      </section>
+      <section>
+        <h2>Resources</h2><br>
+        <ul>
+          <li>https://github.com/lukehoban/es6features</li>
+          <li>https://people.mozilla.org/~jorendorff/es6-draft.html</li>
+          <li>https://mail.mozilla.org/listinfo/es-discuss</li>
+          <li>https://kangax.github.io/compat-table/es6/</li>
+          <li>https://babeljs.io/</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Next</h2><br>
+        <ul>
+          <li>Scope and classes</li>
+          <li>Iterators and Generators </li>
+          <li>Promises, New functions and syntax </li>
+          <li>Async and ES7     </li>
+        </ul>
+      </section>
+      <section>
+        <h1>Thanks!</h1>
+      </section>
+      <section>
+        <h2></h2><br>
+        <ul>
+          <li>@: Geronimo Garcia <Geronimo.Garcia@globant.com></li>
+          <li>tw: @geronimogarcia</li>
+          <li>gh: DarkThrone</li>
+        </ul>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
