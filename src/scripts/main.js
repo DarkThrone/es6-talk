@@ -5,8 +5,7 @@ var bespoke = require('bespoke'),
   backdrop = require('bespoke-backdrop'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
-  nebula = require('bespoke-theme-nebula'),
-  camera = require('bespoke-camera');
+  nebula = require('bespoke-theme-nebula');
 
 // Bespoke.js
 bespoke.from('article', [
@@ -15,8 +14,7 @@ bespoke.from('article', [
   bullets('.bullet'),
   backdrop(),
   scale(),
-  hash(),
-  camera()
+  hash()
 ]);
 
 // Prism syntax highlighting

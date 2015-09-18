@@ -3,29 +3,37 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title ES6 Part 1
+    title ES6
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
   body
 
     article
-
-      section(data-camera)
+    
+      section
         h1 ES6
 
       section
         h2 Intro
+        br
+        ul
+          li Gerónimo Garcia Sgritta
+          li Software Architect @ Globant
+          li Dev for more than 10 years
+          li JavaScript Engine specialist
+          li WebAssembly committee member
         
-      section(data-camera)
+      section
         h2 What? & Why?
 
       section
         h4 In the meantime...
+        
       section.hell
         h1 Hell breaks loose
         
-      section(data-camera)
+      section
         h2 ECMAScript in Time
         br
         ul
@@ -40,7 +48,7 @@ html
       section
         h1 The void
       
-      section(data-camera)
+      section
         h3.bullet ES variations & Flavours
         ul
           li.bullet CoffeeScript
@@ -51,7 +59,7 @@ html
           li.bullet PureScript
           li.bullet Dart
         
-      section(data-camera)
+      section
         h3.bullet CoffeeScript variations
         ul
           li.bullet IcedCoffee
@@ -65,22 +73,22 @@ html
           li.bullet heap.coffee
           li.bullet EmberScript
       
-      section(data-camera)
+      section
         h2 5 out of the first 7 have types
       
-      section(data-camera)
+      section
         h2.gigantic TYPES  
         
-      section
-        img(src="images/nigga.png")
-      
-      section
-        img(src="images/mofo.png")  
+      //section
+      //  img(src="images/nigga.png")
+      //
+      //section
+      //  img(src="images/mofo.png")  
         
       section
         h2 ECMAScript 6
         
-      section(data-camera)
+      section
         h3 Features
         ul
           li modules
@@ -90,7 +98,7 @@ html
           li iterators + for..of
           li.important enhanced object literals
           li.important template strings
-      section(data-camera)
+      section
         h3 Features
         ul
           li destructuring
@@ -100,7 +108,7 @@ html
           li proxies
           li symbols
           li map + set + weakmap + weakset
-      section(data-camera)
+      section
         h3 Features
         ul
           li math + number + string + array + object APIs
@@ -114,11 +122,11 @@ html
       section
         h2 State of engines
         
-      section(data-camera)
+      section
         h2 Sucks Donkey Balls™
         img(src='images/desktop-parity.png')
       
-      section(data-camera)
+      section
         h3 Mobile and server-side 
         h3 also 
         h3 Suck Donkey Balls
@@ -130,14 +138,14 @@ html
       section
         h2 Enter transpilers!
         
-      section(data-camera)
+      section
         h3 Transpilers
         ul
           li Closure Compiler
           li Traceour
           li Babel + core.js (Formerly 6to5)
           
-      section(data-camera)
+      section
         h3 Babel
         h4 core.js + Regenerator
         
@@ -260,10 +268,49 @@ html
             " ".repeat(4 * depth);
             "hello".includes("ell");
             console.log(Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON);
-            Math.trunc(42.7)
-            Math.sign(-7)
+            Math.trunc(42.7);
+            Math.sign(-7);
           
-      section(data-camera)
+      section
+        h2 Example 6
+        h3 Arrow functions
+        pre
+          code.language-javascript.
+            odds  = evens.map(v => v + 1);
+            pairs = evens.map(v => ({ even: v, odd: v + 1 }));
+            nums  = evens.map((v, i) => v + i);
+      
+      section
+        h2 Example 7
+        h3 Default params
+        pre
+          code.language-javascript.
+            function f (x, y = 7, z = 42) {
+                return x + y + z
+            }
+            f(1) === 50;    
+          
+      section
+        h2 Example 8
+        h3 Destructuring
+        pre
+          code.language-javascript.
+            let list = [ 1, 2, 3 ];
+            let [ a, , b ] = list;
+            let { op: a, lhs: { op: b }, rhs: c } = getASTNode();
+
+      section
+        h2 Example 9
+        h3 Destructuring
+        pre
+          code.language-javascript.
+            function h ({ name, val }) {
+                console.log(name, val)
+            }
+            
+            h({ name: "bar", val: 42 })
+          
+      section
         h2 Resources
         br
         ul
@@ -273,14 +320,14 @@ html
           li https://kangax.github.io/compat-table/es6/
           li https://babeljs.io/
 
-      section(data-camera)
+      section
         h2 Next
         br
         ul
-          li Chapter 2: Scope and classes
-          li Chapter 3: Iterators and Generators 
-          li Chapter 4: Promises, New functions and syntax 
-          li Chapter 5: Async and ES7     
+          li Scope and classes
+          li Iterators and Generators 
+          li Promises, New functions and syntax 
+          li Async and ES7     
           
       section
         h1 Thanks!
@@ -289,8 +336,8 @@ html
         h2 
         br
         ul
-          li Geronimo Garcia <Geronimo.Garcia@globant.com>
-          li @geronimogarcia
-          li DarkThrone
+          li @: Geronimo Garcia <Geronimo.Garcia@globant.com>
+          li tw: @geronimogarcia
+          li gh: DarkThrone
 
     script(src='build/build.js')
